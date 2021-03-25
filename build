@@ -9,6 +9,8 @@ sudo apt-get install cpio -y
 python --version
 . build/envsetup.sh
 lunch omni_violet-eng
+export LC_ALL="C"
+export ALLOW_MISSING_DEPENDENCIES=true
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
