@@ -8,7 +8,7 @@ sudo apt-get install cpio -y
 # Normal build steps
 python --version
 . build/envsetup.sh
-lunch potato_violet-userdebug
+lunch omni_violet-eng
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
@@ -32,7 +32,7 @@ make hiddenapi-lists-docs || echo no problem
 make system-api-stubs-docs || echo no problem
 make test-api-stubs-docs || echo no problem
 
-mka potato -j10   # I used bacon build command
+mka recoveryimage   # I used bacon build command
 #sleep 85m # Lets give some space for uploading ccache
 #kill %1 # better way to kill it!
 up out/target/product/violet/*zip
